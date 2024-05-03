@@ -32,8 +32,9 @@ const ViewApplicants = () => {
             {job &&
                 job.applicants.map((i)=>
                 <>
-                    <p>{i.firstName} {i.lastName} {i.email}</p>
+                    <p>{i.firstName} {i.lastName} {i.email} </p>
                     {/* <p>{i.lastName}</p> */}
+                    
                 </>
             )
 

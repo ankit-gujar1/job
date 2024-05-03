@@ -63,6 +63,10 @@ function App() {
     <div className="container">
       <Navbar />
 
+      {/* <div style={{ width: '100%', height: '500px' }}>
+          <iframe src={'http://localhost:8080/resumes/resume-1714404439656-338673169.pdf'} type="application/pdf" width="100%" height="100%" />
+        </div> */}
+
       <div className="container row">
         <div className="col-md-6 col-lg-6 col-sm-12 mt-5">
           <br /><br />

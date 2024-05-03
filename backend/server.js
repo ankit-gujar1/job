@@ -14,6 +14,7 @@ const applicationFormRouter=require('./routes/applicationFormRoutes');
 
 app.use(cors());
 app.use(express.json());
+app.use('/resumes',express.static('resumes'));
 
 //change MONGO_URI and remaining .env stuff
 

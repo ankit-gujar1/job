@@ -13,9 +13,7 @@ const applicationFormSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true,
-        unique: true,
-        trim: true
+        required: true
     },
     phone: {
         type: String,
@@ -31,6 +29,10 @@ const applicationFormSchema = mongoose.Schema({
         required: true,
         type: 'ObjectId',
         ref: 'User'
+    },
+    resume: {
+        type: String, // Just store the path to the uploaded file
+        required: true
     }
 
 })

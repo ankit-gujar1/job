@@ -37,9 +37,11 @@ const getApplicationsByCId=async(req,res)=>{ //admin can get candidate's applied
 const postForm=async(req,res)=>{ //for candidate only
     const {firstName,lastName,email,phone}=req.body;
     const submittedBy=req.user._id;
+    const resumePath = req.file.path;
+
     const {id}=req.params;
     try{
-        const a=await Application.create({firstName,lastName,email,phone,submittedBy,jobId:id});
+        const a=await Application.create({firstName,lastName,email,phone,submittedBy,jobId:id,resume: resumePath});
         res.status(200).json(a);
     }catch(e){
         res.status(400).json({error:e.message});
